@@ -6,19 +6,20 @@ public class UI {
 
 	public static void printBoard(ChessPiece[][] pieces) {
 		
+		
 		for(int i=pieces.length; i > 0; i--) {
 			System.out.print(i + " ");
-			for(int j=pieces.length; j > 0; j--) {
-				printPiece(pieces[i-1][j-1]);
+			for(int j=0; j < pieces.length; j++) {
+				printPiece(pieces[i-1][j]);
 			}
 			System.out.println("");
 		}
 		
 		System.out.print(" ");
-		char letterRow = 'a';
+		char letterColumn = 'a';
 		for(int i=pieces.length; i > 0; i--) {
-			 System.out.print(" " +letterRow);
-			 letterRow += 1;
+			 System.out.print(" " +letterColumn);
+			 letterColumn += 1;
 		}
 	}
 	
