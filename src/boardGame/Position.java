@@ -28,6 +28,13 @@ public class Position {
 	
 	@Override
 	public String toString() {
-		return "X: "+ row + ", Y: " + column;
+		
+		char letterColumn='a';
+		
+		for(int i=1; i<this.column; i++) {
+			letterColumn += 1;
+		}
+		
+		return "X: "+ row + ", Y: " + letterColumn;
 	}
 }
